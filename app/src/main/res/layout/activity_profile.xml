@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linlay_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/grid_2x"
+            android:paddingBottom="@dimen/grid_2x">
+
+            <ImageView
+                android:id="@+id/iv_profile_user"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="@dimen/standard_width"
+                android:layout_marginBottom="@dimen/grid_2x"
+                android:background="@color/colorAccent"
+                app:srcCompat="@drawable/ic_person_outline" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_profile_username"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_profile_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_username"
+                    android:drawableLeft="@drawable/ic_person_outline"
+                    android:drawablePadding="@dimen/grid_1x"
+                    android:drawableTint="@color/colorDarkGrey" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/grid_2x">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_profile_birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_profile_birthday"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:drawableLeft="@drawable/ic_calendar_today_outline"
+                        android:drawableTint="@color/colorDarkGrey"
+                        android:drawablePadding="@dimen/grid_1x"
+                        android:textSize="16sp"
+                        android:hint="@string/hint_birthdate" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="@dimen/grid_2x"
+                    android:layout_marginRight="@dimen/grid_2x"
+                    android:text="Age" />
+
+                <TextView
+                    android:id="@+id/tv_profile_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="1sp"
+                    android:layout_marginLeft="@dimen/grid_1x"
+                    tools:text="22" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/grid_2x">
+
+                <TextView
+                    android:id="@+id/tv_profile_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/standard_height"
+                    android:layout_weight="1"
+                    android:padding="@dimen/grid_2x"
+                    android:textSize="18sp"
+                    android:text="@string/user_gender" />
+
+                <RadioGroup
+                    android:id="@+id/rg_profile_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/standard_height"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rb_profile_man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Man" />
+
+                    <RadioButton
+                        android:id="@+id/rb_profile_woman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Woman" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tv_profile_preferred"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/standard_height"
+                    android:layout_weight="1.5"
+                    android:padding="@dimen/grid_2x"
+                    android:textSize="18sp"
+                    android:text="@string/preferred_gender" />
+
+                <RadioGroup
+                    android:id="@+id/rg_profile_preferred"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/standard_height"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rb_profile_look_man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Man" />
+
+                    <RadioButton
+                        android:id="@+id/rb_profile_look_woman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Woman" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_profile_apply"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="@dimen/standard_height"
+                android:layout_marginTop="@dimen/grid_2x"
+                android:layout_marginBottom="@dimen/grid_2x"
+                android:text="@string/button_apply"
+                style="@style/StandardButton"
+                android:onClick="onApply" />
+
+            <Button
+                android:id="@+id/btn_profile_signout"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="@dimen/standard_height"
+                android:text="@string/button_signout"
+                style="@style/StandardButton"
+                android:onClick="onSignout" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/linlay_profile_pb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:elevation="5dp"
+        android:visibility="gone"
+        android:background="@color/colorTransparentGrey">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

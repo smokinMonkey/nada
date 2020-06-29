@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/grid_1x"
+    android:layout_marginLeft="@dimen/grid_1x"
+    android:layout_marginTop="@dimen/grid_1x"
+    android:layout_marginBottom="@dimen/grid_1x"
+    android:gravity="left"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp">
+
+        <FrameLayout
+            android:id="@+id/container_message_item_other_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_messages_item"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:clickable="true"
+                android:onClick="userDetail"
+                android:background="@color/colorAccent"/>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_messages_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="320dp"
+        android:layout_marginLeft="@dimen/grid_1x"
+        android:padding="4dp"
+        android:background="@drawable/chat_message_bg_other_user_rounded"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimaryText"
+        tools:text="this is a test message\n with multiple lines"/>
+
+</LinearLayout>

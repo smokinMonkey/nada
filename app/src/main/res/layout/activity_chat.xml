@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ChatActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_chat_top_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:cardElevation="4dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/grid_2x"-->
+<!--            app:cardCornerRadius="@dimen/standard_corner_radius">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_chat_navbar_profile_icon"-->
+<!--                android:layout_width="@dimen/standard_image_size"-->
+<!--                android:layout_height="@dimen/standard_image_size"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:background="@color/colorAccent"-->
+<!--                app:srcCompat="@drawable/ic_person_outline" />-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+        <TextView
+            android:id="@+id/tv_chat_navbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/grid_3x"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            tools:text="Username"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chat_messages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="@dimen/grid_1x"
+        android:paddingBottom="@dimen/grid_2x"
+        android:paddingRight="@dimen/grid_1x"
+        android:paddingLeft="@dimen/grid_1x"
+        android:background="@color/colorLightGrey"
+        app:layout_constraintTop_toBottomOf="@+id/cv_chat_top_navbar"
+        app:layout_constraintBottom_toTopOf="@id/linlay_chat_bottom_navbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linlay_chat_bottom_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/colorLightGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <EditText
+            android:id="@+id/et_chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/chat_box_bg_rounded"
+            android:maxLines="10"
+            android:scrollbars="horizontal"
+            android:paddingLeft="@dimen/grid_1x"
+            android:paddingRight="@dimen/grid_1x"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp" />
+
+        <Button
+            android:id="@+id/btn_chat_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".75"
+            android:background="@color/colorAccentLight"
+            android:text="Send"
+            android:textColor="@color/colorSecondaryText"
+            android:clickable="true"
+            android:onClick="onSend"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

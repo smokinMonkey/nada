@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">nada</string>
+
+    <!-- hints -->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="hint_birthdate">Birthdate MM/dd/yyyy</string>
+
+    <string name="user_gender">I am</string>
+    <string name="preferred_gender">Looking for</string>
+
+    <!-- button text -->
+    <string name="button_login">Login</string>
+    <string name="button_register">Register</string>
+    <string name="button_apply">Apply</string>
+    <string name="button_signout">Signout</string>
+
+    <!-- authentication text -->
+    <string name="forgot_password">Forgot password?</string>
+    <string name="no_account">Register account</string>
+    <string name="back_to_login">Already registered? Click here to login</string>
+
+    <!-- journal post text -->
+    <string name="hint_post_title">Post entry title (required)</string>
+    <string name="hint_post_entry">Post journal entry (optional)\nHow are you feeling and what are your thoughts?</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>
